@@ -49,7 +49,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getPacients(): void {
-    this.http.get('https://clinic-app-tau.vercel.app/api/pacientes/').subscribe(
+    this.http.get('http://clinic-app-tau.vercel.app/api/pacientes/').subscribe(
       response => {
         this.pacients = response;
         this.filteredPacients = this.pacients;
@@ -60,7 +60,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getConsultations(): void {
-    this.http.get('https://clinic-app-tau.vercel.app/api/consultas/').subscribe(
+    this.http.get('http://clinic-app-tau.vercel.app/api/consultas/').subscribe(
       response => {
         this.consultations = response;
       },
@@ -69,7 +69,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getAddresses(): void {
-    this.http.get('https://clinic-app-tau.vercel.app/api/enderecos/').subscribe(
+    this.http.get('http://clinic-app-tau.vercel.app/api/enderecos/').subscribe(
       response => {
         this.addresses = response;
       },
