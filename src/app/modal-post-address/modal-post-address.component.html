@@ -1,0 +1,73 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h2 class="modal-title" id="modal-basic-title">Inclusão de Novo Endereço</h2>
+  </div>
+
+  <div class="modal-body">
+    <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+      <p>*Outros poderão ser adicionados ao cadastro posteriormente.</p>
+      <div class="double-line">
+        <mat-form-field appearance="fill" class="dl1">
+          <mat-label>Rua</mat-label>
+          <input matInput required name="rua" formControlName="rua">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="dl2">
+          <mat-label>Nº</mat-label>
+          <input matInput required type="number" name="numero" formControlName="numero">
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Bairro</mat-label>
+        <input matInput required name="bairro" formControlName="bairro">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <input matInput required name="cidade" formControlName="cidade">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>UF</mat-label>
+        <select matNativeControl required name="estado" formControlName="estado">
+          <option value="">Selecione</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espirito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+      </mat-form-field>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-primary">Adicionar</button>
+        <button type="reset" class="btn btn-outline-dark">Limpar</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<button mat-button class="add-btn" color="primary" (click)="open(content)">Adicionar</button>

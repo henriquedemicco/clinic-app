@@ -1,0 +1,111 @@
+<div class="container">
+
+<app-modal-post-pacient></app-modal-post-pacient>
+
+<mat-accordion class="accordion" *ngIf="pacients && pacients.length">
+    <mat-expansion-panel *ngFor="let pacient of filteredPacients
+    | paginate: { itemsPerPage: 3, currentPage: page, totalItems: totalLength }">
+        <mat-expansion-panel-header class="panel-header">
+        <mat-panel-title>
+            {{pacient.nome}}
+        </mat-panel-title>
+
+        <mat-panel-description class="panel-icons">
+            <app-modal-put-pacient 
+            pacientName="{{pacient.nome}}"
+            pacientEmail={{pacient.email}}
+            pacientGender={{pacient.sexo}}
+            pacientCPF={{pacient.cpf}}
+            pacientPhone={{pacient.celular}}
+            pacientBirthday={{pacient.data_nascimento}}
+            pacientId={{pacient.id_paciente}}
+            >
+            </app-modal-put-pacient>
+            <app-modal-delete-pacient
+            pacientName="{{pacient.nome}}"
+            pacientId={{pacient.id_paciente}}
+            >
+            </app-modal-delete-pacient>
+        </mat-panel-description>
+
+        </mat-expansion-panel-header>
+
+        <div class="visible-area">
+            <div class="pacient-side">
+                <div class="pacient-info">
+                    <p><em>E-mail:</em>{{pacient.email}}</p>
+                    <p><em>Sexo:</em>{{pacient.sexo}}</p>
+                    <p><em>CPF:</em>{{pacient.cpf}}</p>
+                    <p><em>Celular:  </em>{{pacient.celular}}</p>
+                    <p><em>Data de nascimento:  </em>{{pacient.data_nascimento}}</p>
+                </div>
+                <div>
+                    <hr>
+                    <h4><strong>Consultas Realizadas:</strong></h4>
+
+                    <app-modal-post-consultation
+                        pacientName="{{pacient.nome}}"
+                        pacientId={{pacient.id_paciente}}
+                    >
+                    </app-modal-post-consultation>
+
+                    <div *ngIf="consultations && consultations.length" class="consultations-display">
+                        <div *ngFor="let consultation of consultations">
+                            <div *ngIf="consultation.paciente == pacient.id_paciente">
+                                <div class="consultation-card">
+                                    <h5>Consulta realizada dia <span>{{consultation.data_date}}</span> às {{consultation.data_time}}</h5>
+                                    <hr>
+                                    <p>{{consultation.info}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="address-side" *ngIf="addresses && addresses.length">
+            <h4><strong>Endereços:</strong></h4>
+
+            <app-modal-post-address 
+                pacientId={{pacient.id_paciente}}
+                pacientName="{{pacient.nome}}"
+            >
+            </app-modal-post-address>
+
+            <div *ngFor="let address of addresses">
+                <div class="address-info" *ngIf="address.paciente == pacient.id_paciente">
+                    <p>{{address.rua}}, {{address.numero}} - {{address.bairro}}</p>
+                    <p><strong>{{address.cidade}}</strong>, {{address.estado}}</p>
+
+                    <app-modal-delete-address
+                        pacientId={{pacient.id_paciente}}
+                        pacientName="{{pacient.nome}}"
+                        streetAddress="{{address.rua}}"
+                        addressId={{address.id_endereco}}
+                    >
+                    </app-modal-delete-address>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </mat-expansion-panel>
+</mat-accordion>
+
+</div>
+<div class="empty-case" *ngIf="!pacients.length">
+    <h3><em>Você ainda não possui pacientes cadastrados.</em></h3>
+</div>
+
+<div class="pag-container">
+    <pagination-controls
+        *ngIf="pacients && pacients.length"
+        class="pagination" 
+        (pageChange)="page = $event"
+        [responsive]="true"
+        previousLabel="Anterior"
+        nextLabel="Próxima"
+        >
+    </pagination-controls>
+</div>

@@ -1,0 +1,162 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+
+    .accordion {
+        width: 700px;
+
+        .panel-header {
+            background-color: rgb(221, 250, 255);
+            position: relative;
+
+            .panel-icons {
+                position: absolute;
+                right: 30px;
+            }
+        }
+
+        .visible-area {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 10px;
+
+            h4 {
+                letter-spacing: 1px;
+            }
+
+            em {
+                color: rgb(255, 218, 255);
+                margin-right: 8px;
+            }
+
+            .pacient-side {
+                background-color: blueviolet;
+                padding: 15px;
+                border-radius: 7px;
+                color: #FFF;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            .consultation-card {
+                background-color: rgb(99, 57, 99);
+                margin: 10px;
+                padding: 10px;
+                border-radius: 8px;
+
+                span {
+                    color: violet;
+                }
+
+                h5 {
+                    text-align: center;
+                }
+
+                p {
+                    font-style: italic;
+                    font-size: 0.8rem;
+                    text-align: center;
+                }
+            }
+
+            .pacient-info {
+                margin-top: 20px;
+            }
+
+            .address-side {
+                padding: 20px;
+                padding-left: 50px;
+            }
+
+            .add-btn {
+                margin: 10px auto;
+            }
+
+            .conts-btn {
+                cursor: default;
+
+                p {
+                    margin-top: 13px;
+                }
+            }
+
+            .consultations-display {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .address-info {
+                border: solid 1px rgb(221, 250, 255);
+                border-radius: 7px;
+                margin: 5px;
+                padding: 5px;
+                font-size: 12px;
+                text-align: center;
+                padding-top: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .address-info:hover {
+                border: solid 1px rgb(136, 211, 224);
+            }
+
+            .purple-trash {
+                color: rgb(92, 28, 134);
+            }
+
+            .btn-cst:hover {
+                border: 1px solid #FFF;
+                color: #FFF;
+            }
+
+        }
+    }
+
+}
+
+.pag-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+
+.pag-container .pagination ::ng-deep .ngx-pagination .current {
+    background: rgb(92, 28, 134);
+    border-radius: 5px;
+}
+
+.pag-container .pagination ::ng-deep .ngx-pagination a {
+    color: #FFF !important;
+}
+
+.pag-container .pagination ::ng-deep .ngx-pagination a:hover {
+    background-color: rgba(180, 238, 238, 0.5);
+}
+
+.empty-case {
+    margin-top: 100px;
+    text-align: center;
+    h3 {
+        font-style: italic;
+        color: #FFF;
+    }
+}
+
+@media screen and (max-width: 322px) {
+    .prod-card {
+        img {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+

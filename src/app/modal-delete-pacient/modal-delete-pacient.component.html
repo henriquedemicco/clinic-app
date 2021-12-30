@@ -1,0 +1,18 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title">Exclusão de Cadastro</h4>
+
+      </div>
+      <div class="modal-body">
+        <p><strong>Deseja mesmo excluir o cadastro de <span class="text-primary">"{{pacientName}}"</span> ?</strong></p>
+        <p>Todas as informações associadas a este perfil serão excluídas.
+        <span class="text-danger">Essa operação não poderá ser desfeita.</span>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="onSubmit()">Ok</button>
+      </div>
+</ng-template>
+
+<mat-icon matTooltip="Excluir Cadastro" (click)="open(content)">delete</mat-icon>

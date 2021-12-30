@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "61c04b9f-bbac-4f96-b359-9f1fb634bfdd"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -78,6 +82,10 @@
               "browserTarget": "clinic-app:build:development"
             }
           },
+          "options": {
+            "browserTarget": "clinic-app:build",
+            "proxyConfig": "src/proxy.conf.json"
+        },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -99,9 +107,11 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }

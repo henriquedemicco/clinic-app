@@ -1,0 +1,22 @@
+.modal-body {
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .double-line {
+        display: flex;
+        gap: 10px;
+
+        .dl1 {
+            flex-grow: 2;
+        }
+
+        .dl2 {
+            max-width: 80px;
+        }
+    }
+    p {
+        font-size: 11px;
+    }
+}

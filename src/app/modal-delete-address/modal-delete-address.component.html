@@ -1,0 +1,19 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title">Exclusão de Endereço</h4>
+
+      </div>
+      <div class="modal-body">
+        <p>Deseja mesmo excluir o endereço da rua <strong>{{streetAddress}}</strong>,
+            do cadastro de <span class="text-primary">"{{pacientName}}"</span> ?</p>
+        <p>Todas as informações associadas a este endereço específico serão excluídas.
+        <span class="text-danger">Essa operação não poderá ser desfeita.</span>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="onSubmit()">Ok</button>
+      </div>
+</ng-template>
+
+<mat-icon class="purple-trash" matTooltip="Excluir" (click)="open(content)">delete</mat-icon>

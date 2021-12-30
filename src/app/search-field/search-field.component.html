@@ -1,0 +1,13 @@
+<div class="search">
+    <div class="input-search">
+        <input type="search" placeholder="Buscar por Nome ou Cpf"
+        [(ngModel)]="listFilter"
+        >
+
+        <span class="material-icons">
+            search
+        </span>
+    </div>
+</div>
+
+<app-pacients [listFilter]="listFilter"></app-pacients>

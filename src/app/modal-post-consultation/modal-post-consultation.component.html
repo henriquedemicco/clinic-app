@@ -1,0 +1,26 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-basic-title">Registro de nova consulta</h2>
+    </div>
+  
+    <div class="modal-body">
+      <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Data e Hora da Consulta</mat-label>
+          <input matInput type="datetime-local" required name="data" formControlName="data">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Informações</mat-label>
+          <textarea matInput required name="info" formControlName="info"></textarea>
+        </mat-form-field>
+  
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-outline-primary">Adicionar</button>
+          <button type="reset" class="btn btn-outline-dark">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </ng-template>
+
+  <button mat-raised-button class="add-btn" color="basic" (click)="open(content)">Adicionar</button>
