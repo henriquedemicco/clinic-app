@@ -1,4 +1,4 @@
-# Clinic App 
+# Clinic App 👩‍⚕️👨‍⚕️
 
 Este projeto foi desenvolvido utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 13.1.2.
 
@@ -16,6 +16,6 @@ Para instalar as dependências do projeto, basta executar o seguinte comando, no
 
 Depois, para rodá-lo, basta executar o seguinte comando:
 
-### `npm start` ou ### `ng serve -o`
+### `npm start` ou `ng serve -o`
 
 Acesse [http://localhost:4200](http://localhost:4200) para visualização em seu navegador.
