@@ -1,6 +1,6 @@
 # ClinicApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Este projeto foi desenvolvido utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 13.1.2.
 
 ## Development server
 
