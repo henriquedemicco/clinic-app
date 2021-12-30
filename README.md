@@ -1,27 +1,21 @@
-# ClinicApp
+# Clinic App 👩‍⚕️👨‍⚕️
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Este projeto foi desenvolvido utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 13.1.2.
 
-## Development server
+## Proposta
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A proposta do projeto foi desenvolver um CRUD para gerenciamento de cadastro de pacientes para uma clínica médica.
 
-## Code scaffolding
+## Acesso e execução
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Primeiro, clone este respositório. Você precisará do `node` instalado globalmente em sua máquina para acesso às funções do gerenciador `npm`.
 
-## Build
+Para instalar as dependências do projeto, basta executar o seguinte comando, no diretório do mesmo:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### `npm install`
 
-## Running unit tests
+Depois, para rodá-lo, basta executar o seguinte comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### `npm start` ou `ng serve -o`
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Acesse [http://localhost:4200](http://localhost:4200) para visualização em seu navegador.
