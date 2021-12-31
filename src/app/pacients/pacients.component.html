@@ -6,27 +6,27 @@
     <mat-expansion-panel *ngFor="let pacient of filteredPacients
     | paginate: { itemsPerPage: 3, currentPage: page, totalItems: totalLength }">
         <mat-expansion-panel-header class="panel-header">
-        <mat-panel-title>
-            {{pacient.nome}}
-        </mat-panel-title>
+            <mat-panel-title>
+                {{pacient.nome}}
+            </mat-panel-title>
 
-        <mat-panel-description class="panel-icons">
-            <app-modal-put-pacient 
-            pacientName="{{pacient.nome}}"
-            pacientEmail={{pacient.email}}
-            pacientGender={{pacient.sexo}}
-            pacientCPF={{pacient.cpf}}
-            pacientPhone={{pacient.celular}}
-            pacientBirthday={{pacient.data_nascimento}}
-            pacientId={{pacient.id_paciente}}
-            >
-            </app-modal-put-pacient>
-            <app-modal-delete-pacient
-            pacientName="{{pacient.nome}}"
-            pacientId={{pacient.id_paciente}}
-            >
-            </app-modal-delete-pacient>
-        </mat-panel-description>
+            <mat-panel-description class="panel-icons">
+                <app-modal-put-pacient 
+                pacientName="{{pacient.nome}}"
+                pacientEmail={{pacient.email}}
+                pacientGender={{pacient.sexo}}
+                pacientCPF={{pacient.cpf}}
+                pacientPhone={{pacient.celular}}
+                pacientBirthday={{pacient.data_nascimento}}
+                pacientId={{pacient.id_paciente}}
+                >
+                </app-modal-put-pacient>
+                <app-modal-delete-pacient
+                pacientName="{{pacient.nome}}"
+                pacientId={{pacient.id_paciente}}
+                >
+                </app-modal-delete-pacient>
+            </mat-panel-description>
 
         </mat-expansion-panel-header>
 

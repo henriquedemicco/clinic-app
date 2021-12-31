@@ -20,3 +20,32 @@ h3 {
     color:#FFF;
     font-style: italic;
 }
+
+
+@media screen and (max-width: 470px) {
+    .logo {
+        padding: 20px;
+    }
+
+    h3 {
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 312px) {
+    .logo {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        flex-direction: column;
+
+        h1 {
+            font-size: 45px;
+        }
+    }
+
+    h3 {
+        padding: 20px;
+    }
+}

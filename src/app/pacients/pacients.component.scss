@@ -4,7 +4,6 @@
     align-items: center;
     gap: 30px;
     padding: 30px;
-    flex-wrap: wrap;
 
     .accordion {
         width: 700px;
@@ -151,12 +150,68 @@
     }
 }
 
-@media screen and (max-width: 322px) {
-    .prod-card {
-        img {
-            margin: 0;
-            width: 100%;
+
+
+@media screen and (max-width: 994px) {
+    .container {
+        .accordion {
+            max-width: 700px;
         }
     }
 }
 
+
+@media screen and (max-width: 730px) {
+    .container {
+        .accordion {
+            width: 90%;
+
+            .visible-area {
+                grid-template-columns: auto;
+
+                .pacient-info {
+                    width: 95%;
+                }
+
+                .address-side {
+                    padding: 0;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .container {
+        padding: 20px;
+
+        .accordion {
+            width: 95%;
+            
+            .visible-area {
+                .pacient-side {
+                    .pacient-info {
+                        max-width: 95%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 374px) {
+    .container {
+        padding: 20px;
+
+        .accordion {
+            width: 100%;
+            
+            .visible-area {
+                word-break: break-all;
+                grid-template-columns: auto;
+            }
+        }
+    }
+}
