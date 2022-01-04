@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ModalPutPacientComponent implements OnInit {
 
-  SERVER_URL_PACIENT = "/api/pacientes/";
+  SERVER_URL_PACIENT = `${environment.baseURL}/pacientes/`;
 
   constructor(private modalService: NgbModal,
     private formBuilder: FormBuilder, 

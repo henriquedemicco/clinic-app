@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-modal-post-address',
@@ -10,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ModalPostAddressComponent implements OnInit {
 
-  SERVER_URL_ADDRESS = "/api/enderecos/";
+  SERVER_URL_ADDRESS = `${environment.baseURL}/enderecos/`;
 
   constructor(private modalService: NgbModal,
     private formBuilder: FormBuilder, 

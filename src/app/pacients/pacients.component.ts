@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-pacients',
@@ -7,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./pacients.component.scss']
 })
 export class PacientsComponent implements OnInit {
+
 
   public pacients: any = [];
   public consultations: any = [];
@@ -49,7 +51,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getPacients(): void {
-    this.http.get('/api/pacientes/').subscribe(
+    this.http.get(`${environment.baseURL}/pacientes/`).subscribe(
       response => {
         this.pacients = JSON.parse(JSON.stringify(response));
         console.log(this.pacients);
@@ -61,7 +63,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getConsultations(): void {
-    this.http.get('/api/consultas/').subscribe(
+    this.http.get(`${environment.baseURL}/consultas/`).subscribe(
       response => {
         this.consultations = JSON.parse(JSON.stringify(response));
       },
@@ -70,7 +72,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getAddresses(): void {
-    this.http.get('/api/enderecos/').subscribe(
+    this.http.get(`${environment.baseURL}/enderecos/`).subscribe(
       response => {
         this.addresses = JSON.parse(JSON.stringify(response));
       },

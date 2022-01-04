@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-modal-delete-pacient',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ModalDeletePacientComponent implements OnInit {
 
-  SERVER_URL_PACIENT = "/api/pacientes/";
+  SERVER_URL_PACIENT = `${environment.baseURL}/pacientes/`;
 
   constructor(private modalService: NgbModal,
     private httpClient: HttpClient) { }
