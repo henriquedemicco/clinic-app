@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ModalPostConsultationComponent implements OnInit {
 
-  SERVER_URL_CONSULTATION = "http://localhost:4200/api/consultas/";
+  SERVER_URL_CONSULTATION = "/api/consultas/";
 
   constructor(private modalService: NgbModal,
     private formBuilder: FormBuilder, 

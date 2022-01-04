@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class ModalPostPacientComponent implements OnInit {
 
-  SERVER_URL_PACIENT = "http://localhost:4200/api/pacientes/";
+  SERVER_URL_PACIENT = "/api/pacientes/";
 
   constructor(private modalService: NgbModal,
     private formBuilder: FormBuilder, 

@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ModalDeleteAddressComponent implements OnInit {
 
 
-  SERVER_URL_ADDRESS = "http://localhost:4200/api/enderecos/";
+  SERVER_URL_ADDRESS = "/api/enderecos/";
 
   constructor(private modalService: NgbModal,
     private httpClient: HttpClient) { }
