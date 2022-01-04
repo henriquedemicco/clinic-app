@@ -49,7 +49,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getPacients(): void {
-    this.http.get('/api/pacientes/').subscribe(
+    this.http.get('/api/pacientes/', { responseType: 'json' }).subscribe(
       response => {
         this.pacients = response;
         this.filteredPacients = this.pacients;
@@ -60,7 +60,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getConsultations(): void {
-    this.http.get('/api/consultas/').subscribe(
+    this.http.get('/api/consultas/', { responseType: 'json' }).subscribe(
       response => {
         this.consultations = response;
       },
@@ -69,7 +69,7 @@ export class PacientsComponent implements OnInit {
   }
 
   public getAddresses(): void {
-    this.http.get('/api/enderecos/').subscribe(
+    this.http.get('/api/enderecos/', { responseType: 'json' }).subscribe(
       response => {
         this.addresses = response;
       },
