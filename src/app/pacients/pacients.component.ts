@@ -51,7 +51,8 @@ export class PacientsComponent implements OnInit {
   public getPacients(): void {
     this.http.get('/api/pacientes/').subscribe(
       response => {
-        this.pacients = response;
+        this.pacients = JSON.parse(JSON.stringify(response));
+        console.log(this.pacients);
         this.filteredPacients = this.pacients;
       },
       error => console.log(error)
@@ -62,7 +63,7 @@ export class PacientsComponent implements OnInit {
   public getConsultations(): void {
     this.http.get('/api/consultas/').subscribe(
       response => {
-        this.consultations = response;
+        this.consultations = JSON.parse(JSON.stringify(response));
       },
       error => console.log(error)
     );
@@ -71,7 +72,7 @@ export class PacientsComponent implements OnInit {
   public getAddresses(): void {
     this.http.get('/api/enderecos/').subscribe(
       response => {
-        this.addresses = response;
+        this.addresses = JSON.parse(JSON.stringify(response));
       },
       error => console.log(error)
     );
