@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   name: "dev",
-  baseURL: "http://api-clinic-app.herokuapp.com"
+  baseURL: "https://api-clinic-app.herokuapp.com"
 };
 
 /*
